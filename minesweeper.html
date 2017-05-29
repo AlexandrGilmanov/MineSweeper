@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Сапёр</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="minesweeper.js"></script>
+	<script src="jquery.min.js"></script>
+	<script src="jquery.timer.js"></script>
+	<script src="time.js"></script> 
+	
+	
+</head>
+<body>
+	<img id="loseExplosion" src="you lose.png">
+	<img id="win" src="win.png">
+	<form id="customBoard">
+		Размер игрового поля:
+		<input id="boardWidth" type="number" min="5" max="25"> на <input id="boardHeight" type="number" min="5" max="25">
+		Количество мин:
+		<input id="numMines" type="number" min="5" max="999">
+		<button type="submit" onclick='Start.Timer.toggle();'>Играть!</button>
+		<span id="stopwatch">00:00:00</span>
+		
+		<div id="text">
+		Минимальный размер поля: 5 на 5 клеток,	
+		максимальный размер поля 25 на 25 клеток.
+		</div>
+		
+	</form>
+	</br>
+	</br>
+	<div id="message"> </div>
+	</br>
+	<table id="board">
+	</table>
+
+
+
+</body>
+</html>

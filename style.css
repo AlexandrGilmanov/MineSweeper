@@ -1,0 +1,41 @@
+body {
+    background: url(background.jpg) no-repeat;
+	background-size: 100%;         
+	}
+
+Form {
+	font-weight: bold;
+	
+}	
+	
+#board{
+	border: 3px solid #986943;
+	border-style: outset;
+}
+.box{
+	width: 25px;
+	height: 25px;
+	border: 1px #5f3c1f;
+	background-color: #bdc3c7;
+	border-style: solid;
+
+}
+td{
+	margin: 0px;
+}
+
+table{
+	border-spacing: 0px;
+}
+.box:active{
+	background-color: #7f8c8d;
+}
+
+img{
+	width: 40%;
+	display: none;
+	opacity: 50%;
+	position: fixed;
+	top: 200px;
+	left: 300px;
+}

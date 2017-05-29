@@ -97,12 +97,12 @@ var squareCount = 0;
 	}
 
 	var reveal = function(squareIdNum){
-		console.log("Revealing! ", squareIdNum);
+		console.log("Revealing", squareIdNum);
 
 		
 		if (squareArray[squareIdNum].clickedStatus != "clicked"){
 				squareArray[squareIdNum].clickedStatus = "clicked";
-				console.log("Really revealing! ", squareIdNum);
+				console.log("Really revealing", squareIdNum);
 				var x = squareArray[squareIdNum].id;
 				console.log("reveal x", x);
 

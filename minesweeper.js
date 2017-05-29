@@ -5,23 +5,20 @@ window.onload = function(){
 	var notLost = true;
 	var groundToSweep = 0;
 
-	$("#customBoard").submit(function(event){
-		event.preventDefault();
-		var thisRow;
-		notLost = true;
+$("#customBoard").submit(function(event){
+	event.preventDefault();
+	var thisRow;
+	notLost = true;
 		
-		boardHeight = $("#boardHeight").val() || 20;
-		boardWidth = $("#boardWidth").val() || 20;
+boardHeight = $("#boardHeight").val() || 20;
+boardWidth = $("#boardWidth").val() || 20;
 
-		var numMines = $("#numMines").val();
-		var squareCount = 0;
+var numMines = $("#numMines").val();
+var squareCount = 0;
 
-		
+	var totalSquares = boardHeight * boardWidth;
+	groundToSweep = totalSquares - numMines;
 
-		var totalSquares = boardHeight * boardWidth;
-		groundToSweep = totalSquares - numMines;
-
-		
 		if(totalSquares < numMines){
 			$("#message").html("Слишком много мин.");
 			
@@ -34,8 +31,8 @@ window.onload = function(){
 				thisRow = "";
 				for (var j = 0; j < boardWidth; j++) {
 					
-					thisRow  += "<td id='s" + squareCount + "' class='box'></td>";
-					squareCount += 1;
+				thisRow  += "<td id='s" + squareCount + "' class='box'></td>";
+				squareCount += 1;
 				};
 				
 				$("#board").append( "<tr>" + thisRow + "</tr>" );
@@ -130,7 +127,7 @@ window.onload = function(){
 						$(x).html("");
 						determinePosition(squareIdNum);
 						if(!top && squareArray[squareIdNum-boardWidth].clickedStatus != "clicked"){
-							reveal(squareIdNum-boardWidth); //check up
+							reveal(squareIdNum-boardWidth);
 						}
 						determinePosition(squareIdNum);
 						if(!top && !left && squareArray[squareIdNum-(Number(boardWidth)+1)].clickedStatus != "clicked"){

@@ -177,7 +177,7 @@ var squareCount = 0;
 			if(squareArray[i].isMine){
 				var x = squareArray[i].id;
 				$(x).css("background-color","red");
-				$(x).css("border-style","inset");
+				$(x).css("border-style","inset");  
 			}
 		}
 		setTimeout(function(){
